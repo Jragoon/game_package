@@ -26,6 +26,7 @@ import static org.lwjgl.glfw.GLFW.GLFW_VISIBLE;
 
 import org.lwjgl.opengl.GL;
 import org.lwjgl.opengl.GL11;
+import edu.utc.game.Math.Vector2f;
 
 public class UI {
 	
@@ -113,12 +114,12 @@ public class UI {
 		}
 	}
 	
-	public XYPair<Integer> getMouseLocation()
+	public Vector2f getMouseLocation()
 	{
 		double[] x = new double[1];
 		double[] y = new double[1];
 		GLFW.glfwGetCursorPos(window,  x,  y);
-		return new XYPair<Integer>((int)x[0],(int)y[0]);
+		return new Vector2f((float) x[0], (float) y[0]);
 	}
 	
 	public boolean mouseButtonIsPressed(int button)

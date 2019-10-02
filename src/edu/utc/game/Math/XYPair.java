@@ -1,4 +1,4 @@
-package edu.utc.game;
+package edu.utc.game.Math;
 
 public class XYPair<T> {
 	
