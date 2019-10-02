@@ -32,4 +32,14 @@ public class Vector2f {
 		this.x /= magnitude;
 		this.y /= magnitude;
 	}
+
+	/* Returns the sum vector of these two vectors */
+	public Vector2f add(Vector2f other) {
+		return new Vector2f(this.x + other.x, this.y + other.y);
+	}
+
+	/* Returns the difference vector of these two vectors */
+	public Vector2f subtract(Vector2f other) {
+		return new Vector2f(this.x - other.x, this.y - other.y);
+	}
 }
