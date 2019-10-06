@@ -25,10 +25,15 @@ public class Vector2f {
 		return result;
 	}
 
+	/* Find the magnitude of a vector */
+	public float magnitude() {
+		float magnitudeSquared = this.dotProduct(this);
+		return (float) Math.sqrt(magnitudeSquared);
+	}
+
 	/* Normalize the vector if you are concerned with direction */
 	public void normalize() {
-		float magnitudeSquared = this.dotProduct(this);
-		float magnitude = (float) Math.sqrt(magnitudeSquared);
+		float magnitude = this.magnitude();
 		this.x /= magnitude;
 		this.y /= magnitude;
 	}
